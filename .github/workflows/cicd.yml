@@ -44,7 +44,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          context: ./
+          context: ./lab_2
           file: ./lab_2/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/module10lab2:latest
