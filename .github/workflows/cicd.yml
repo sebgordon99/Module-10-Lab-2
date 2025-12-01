@@ -44,10 +44,10 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          context: ./lab_2
-          file: ./Dockerfile
+          context: ./
+          file: .lab_2/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mvc-structure:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/module10lab2:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
